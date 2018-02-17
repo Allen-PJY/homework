@@ -24,6 +24,7 @@ print('The summation of this two numbers is {}'.format(int(first_num) + int(seco
 if 语句
 
 1. 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
+
 ```python
 age = input("Please enter your age:")
 age = int(age)
@@ -71,6 +72,7 @@ mora()
 while 语句
 
 1. 计算数字 1-100 的累积和
+
 ```python
 i = 1
 sum = 0
@@ -88,6 +90,7 @@ print(sum)
     * 接收两个数字作为形参
     * 计算形参之和并作为函数返回值
     * 调用函数，计算 11 和 22 之和
+
 ```python
 def add2num(num1, num2):
     return num1 + num2
@@ -100,6 +103,7 @@ add2num(11, 22)
     * 计算长方形的边长
     * 把计算结果为函数返回值
     * 调用函数，计算长为 10，宽为 5 的长方形周长，并打印
+
 ```python
 def perimeter(width, height):
     return (width + height) * 2
@@ -113,7 +117,8 @@ print(result)
     * 函数能接收任意个数的数字，作为多边形每个边的长度
     * 计算所有边的总长，并作为函数返回值
     * 调用函数，计算边长为 5，10，5，10，5 的五边形总边长
-    * 调用函数，计算边长为 10，10，10，10，5，5 的六边形总边长
+    * 调用函数，计算边长为 10，10，10，10，5，5 的六边形总边长.
+
 ```python
 def perimeter(*args):
     s = 0
