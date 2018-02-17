@@ -6,25 +6,78 @@
 变量、输入输出、类型转换、算数运算符
 
 1. 写一个程序，让用户输入姓名和年龄，然后打印出 "xxx 今年 xxx 岁"
+```python
+name = input("请输入姓名：")
+age = input("请输入年龄：")
+print('{}今年{}岁'.format(name, age))
+```
 
 2. 写一个程序，让用户输入两个数字，计算两个数之和，并打印
+```python
+first_num = input("Please enter the first number:")
+second_num = input("Please enter the second number:")
+print('The summation of this two numbers is {}'.format(int(first_num) + int(second_num)))
+```
 
 ### 练习2
 
 if 语句
 
 1. 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
+```python
+age = input("Please enter your age:")
+age = int(age)
+if age >= 18:
+    print('Now you can go in and enjoy!')
+else:
+    print('Sorry, you are too young to surfing on the Internet.')
+```
 
 2. 剪刀石头布的猜拳游戏
     * 用户出拳
     * 电脑出拳
     * 比较输赢并打印结果
+```python
+import random
+def mora():
+    option = {
+        'a': '剪刀',
+        'b': '石头',
+        'c': '布',
+    }
+    computer_option = random.choice(list(option.keys()))
+    print("电脑已经准备好了！")
+    user_option = input("请出拳：【a】剪刀，【b】石头，【c】布：")
+    if user_option not in option:
+        print("不按套路出牌")
+        return
+
+    result = ''
+    if (computer_option == 'a' and user_option == 'b') or (computer_option == 'b' and user_option == 'c') or (computer_option == 'c' and user_option == 'a'):
+        result = '你赢了'
+    elif (computer_option == user_option):
+        result = '平局'
+    else:
+        result = '你输了'
+
+    print(result)
+
+mora()
+```
 
 ### 练习3
 
 while 语句
 
 1. 计算数字 1-100 的累积和
+```python
+i = 1
+sum = 0
+while i <= 100:
+    sum += i
+    i += 1
+print(sum)
+```
 
 ### 练习4
 
@@ -34,15 +87,42 @@ while 语句
     * 接收两个数字作为形参
     * 计算形参之和并作为函数返回值
     * 调用函数，计算 11 和 22 之和
+```python
+def add2num(num1, num2):
+    return num1 + num2
 
-2. 定义一个函数，计算一个长方形的边长
+add2num(11, 22)
+```
+
+2. 定义一个函数，计算一个长方形的周长
     * 接受两个参数作为长和宽
     * 计算长方形的边长
     * 把计算结果为函数返回值
-    * 调用函数，计算长为 10，宽为 5 的长方形边长，并打印
+    * 调用函数，计算长为 10，宽为 5 的长方形周长，并打印
+```python
+def perimeter(width, height):
+    return (width + height) * 2
+
+result = perimeter(10, 5)
+print(result)
+```
+
 
 3. 定义一个函数，计算多边形的总边长，要求
     * 函数能接收任意个数的数字，作为多边形每个边的长度
     * 计算所有边的总长，并作为函数返回值
     * 调用函数，计算边长为 5，10，5，10，5 的五边形总边长
     * 调用函数，计算边长为 10，10，10，10，5，5 的六边形总边长
+```python
+def perimeter(*args):
+    s = 0
+    for arg in args:
+        s += arg
+    return s
+
+poly5 = perimeter(5, 10, 5, 10, 5)
+print(poly5)
+
+poly6 = perimeter(10, 10, 10, 10, 5, 5)
+print(poly6)
+```
