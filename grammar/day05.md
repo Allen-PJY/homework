@@ -26,9 +26,9 @@ if 语句
 
 1. a = 1, b= 2，分析下面条件的执行结果为 True 还是 False
     (1) a == b
-        - `False`
+        - False
     (2) a != b
-        - `True`
+        - True
 
 2. 下面的代码有一处错误，请找出来
 ```python
@@ -37,13 +37,14 @@ if a = 100:
     print("获取到数字 %d" % a)
 ```
 
-`if a == 100`
+```if a == 100```
 
 ### 练习3
 
 while 语句
 
 1. 分析下面代码的执行结果
+
 ```python
 i = 0
 sum = 0

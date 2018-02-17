@@ -37,6 +37,7 @@ else:
     * 用户出拳
     * 电脑出拳
     * 比较输赢并打印结果
+
 ```python
 import random
 def mora():
