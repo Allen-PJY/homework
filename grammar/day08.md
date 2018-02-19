@@ -72,8 +72,8 @@ zhangsan = Person('zhangsan', 18)
 print(zhangsan)
 ```
 
-1. 修改 `Person` 类，使用 `__new__` 方法实现单例模式，让 `Person` 类只能创建一个实例对象
 
+6. 修改 `Person` 类，使用 `__new__` 方法实现单例模式，让 `Person` 类只能创建一个实例对象
 ```python
 class Person(object):
     _instance = None
@@ -100,6 +100,3 @@ print(id(lisi))
 print(zhangsan)
 print(id(zhangsan))
 ```
-
-
-
