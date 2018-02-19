@@ -108,3 +108,6 @@ client_socket.send(send_msg.encode('gbk'))
 client_socket.close()
 tcp_server_socket.close()
 ```
+
+#### TCP 通信过程
+![TCP 三次握手和四次挥手](http://p4emt3ysm.bkt.clouddn.com/tcp.png)
