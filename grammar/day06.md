@@ -1,32 +1,28 @@
-# day06
+# day06 变量、if、while、函数
 
 ---
 
-### 练习1
+### 变量、输入输出、类型转换、算数运算符
 
-变量、输入输出、类型转换、算数运算符
+#### 写一个程序，让用户输入姓名和年龄，然后打印出 "xxx 今年 xxx 岁"
 
-1. 写一个程序，让用户输入姓名和年龄，然后打印出 "xxx 今年 xxx 岁"
+```python
+name = input("请输入姓名：")
+age = input("请输入年龄：")
+print('{}今年{}岁'.format(name, age))
+```
 
-   ```py
-   name = input("请输入姓名：")
-   age = input("请输入年龄：")
-   print('{}今年{}岁'.format(name, age))
-   ```
+#### 写一个程序，让用户输入两个数字，计算两个数之和，并打印
 
-2. 写一个程序，让用户输入两个数字，计算两个数之和，并打印
+```python
+first_num = input("Please enter the first number:")
+second_num = input("Please enter the second number:")
+print('The summation of this two numbers is {}'.format(int(first_num) + int(second_num)))
+```
 
-   ```python
-   first_num = input("Please enter the first number:")
-   second_num = input("Please enter the second number:")
-   print('The summation of this two numbers is {}'.format(int(first_num) + int(second_num)))
-   ```
+### if 语句
 
-### 练习2
-
-if 语句
-
-1. 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
+#### 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
 
 ```python
 age = input("Please enter your age:")
@@ -37,10 +33,11 @@ else:
     print('Sorry, you are too young to surfing on the Internet.')
 ```
 
-1. 剪刀石头布的猜拳游戏
-   * 用户出拳
-   * 电脑出拳
-   * 比较输赢并打印结果
+#### 剪刀石头布的猜拳游戏
+
+* 用户出拳
+* 电脑出拳
+* 比较输赢并打印结果
 
 ```python
 import random
@@ -70,11 +67,9 @@ def mora():
 mora()
 ```
 
-### 练习3
+### while 语句
 
-while 语句
-
-1. 计算数字 1-100 的累积和
+#### 计算数字 1-100 的累积和
 
 ```python
 i = 1
@@ -85,14 +80,13 @@ while i <= 100:
 print(sum)
 ```
 
-### 练习4
+### 函数
 
-函数
+#### 定义一个函数，要求：
 
-1. 定义一个函数，要求：
-   * 接收两个数字作为形参
-   * 计算形参之和并作为函数返回值
-   * 调用函数，计算 11 和 22 之和
+* 接收两个数字作为形参
+* 计算形参之和并作为函数返回值
+* 调用函数，计算 11 和 22 之和
 
 ```python
 def add2num(num1, num2):
@@ -101,11 +95,12 @@ def add2num(num1, num2):
 add2num(11, 22)
 ```
 
-1. 定义一个函数，计算一个长方形的周长
-   * 接受两个参数作为长和宽
-   * 计算长方形的边长
-   * 把计算结果为函数返回值
-   * 调用函数，计算长为 10，宽为 5 的长方形周长，并打印
+#### 定义一个函数，计算一个长方形的周长
+
+* 接受两个参数作为长和宽
+* 计算长方形的边长
+* 把计算结果为函数返回值
+* 调用函数，计算长为 10，宽为 5 的长方形周长，并打印
 
 ```python
 def perimeter(width, height):
@@ -115,11 +110,12 @@ result = perimeter(10, 5)
 print(result)
 ```
 
-1. 定义一个函数，计算多边形的总边长，要求
-   * 函数能接收任意个数的数字，作为多边形每个边的长度
-   * 计算所有边的总长，并作为函数返回值
-   * 调用函数，计算边长为 5，10，5，10，5 的五边形总边长
-   * 调用函数，计算边长为 10，10，10，10，5，5 的六边形总边长.
+#### 定义一个函数，计算多边形的总边长，要求
+
+* 函数能接收任意个数的数字，作为多边形每个边的长度
+* 计算所有边的总长，并作为函数返回值
+* 调用函数，计算边长为 5，10，5，10，5 的五边形总边长
+* 调用函数，计算边长为 10，10，10，10，5，5 的六边形总边长.
 
 ```python
 def perimeter(*args):
@@ -134,6 +130,3 @@ print(poly5)
 poly6 = perimeter(10, 10, 10, 10, 5, 5)
 print(poly6)
 ```
-
-
-
