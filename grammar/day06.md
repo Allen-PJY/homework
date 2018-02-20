@@ -2,9 +2,9 @@
 
 ---
 
-### 变量、输入输出、类型转换、算数运算符
+### 1. 变量、输入输出、类型转换、算数运算符
 
-#### 写一个程序，让用户输入姓名和年龄，然后打印出 "xxx 今年 xxx 岁"
+##### 写一个程序，让用户输入姓名和年龄，然后打印出 "xxx 今年 xxx 岁"
 
 ```python
 name = input("请输入姓名：")
@@ -12,7 +12,7 @@ age = input("请输入年龄：")
 print('{}今年{}岁'.format(name, age))
 ```
 
-#### 写一个程序，让用户输入两个数字，计算两个数之和，并打印
+##### 写一个程序，让用户输入两个数字，计算两个数之和，并打印
 
 ```python
 first_num = input("Please enter the first number:")
@@ -20,9 +20,9 @@ second_num = input("Please enter the second number:")
 print('The summation of this two numbers is {}'.format(int(first_num) + int(second_num)))
 ```
 
-### if 语句
+### 2. if 语句
 
-#### 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
+##### 写一个程序，让用户输入自己的年龄，如果年龄大于 18 岁则打印可以上网，否则打印不能上网
 
 ```python
 age = input("Please enter your age:")
@@ -33,7 +33,7 @@ else:
     print('Sorry, you are too young to surfing on the Internet.')
 ```
 
-#### 剪刀石头布的猜拳游戏
+##### 剪刀石头布的猜拳游戏
 
 * 用户出拳
 * 电脑出拳
@@ -67,9 +67,9 @@ def mora():
 mora()
 ```
 
-### while 语句
+### 3. while 语句
 
-#### 计算数字 1-100 的累积和
+##### 计算数字 1-100 的累积和
 
 ```python
 i = 1
@@ -80,9 +80,9 @@ while i <= 100:
 print(sum)
 ```
 
-### 函数
+### 4. 函数
 
-#### 定义一个函数，要求：
+##### 定义一个函数，要求：
 
 * 接收两个数字作为形参
 * 计算形参之和并作为函数返回值
@@ -95,7 +95,7 @@ def add2num(num1, num2):
 add2num(11, 22)
 ```
 
-#### 定义一个函数，计算一个长方形的周长
+##### 定义一个函数，计算一个长方形的周长
 
 * 接受两个参数作为长和宽
 * 计算长方形的边长
@@ -110,7 +110,7 @@ result = perimeter(10, 5)
 print(result)
 ```
 
-#### 定义一个函数，计算多边形的总边长，要求
+##### 定义一个函数，计算多边形的总边长，要求
 
 * 函数能接收任意个数的数字，作为多边形每个边的长度
 * 计算所有边的总长，并作为函数返回值

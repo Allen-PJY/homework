@@ -1,7 +1,7 @@
 # day12 UDP、TCP
 
 ---
-#### UDP 客户端
+#### 1. UDP 客户端
 
 ```python
 from socket import *
@@ -20,7 +20,7 @@ udp_socket.sendto(send_msg.encode('gbk'), dest_addr)
 udp_socket.close()
 ```
 
-#### UDP 服务端
+#### 2. UDP 服务端
 
 ```python
 from socket import *
@@ -41,7 +41,7 @@ print(dest_addr)
 udp_socket.close()
 ```
 
-#### TCP和UDP的区别
+#### 3. TCP和UDP的区别
 
 	- TCP 是**面向连接**的，双方必须三次握手后才能通信，结束时四次挥手，而UDP 是**面向广播**的，
 	- TCP 传输是可靠的，采用
@@ -50,7 +50,7 @@ udp_socket.close()
 		- **错误校验**  重发丢失，舍弃重复，保证无差错
 		- **流量和阻塞控制**  有序数据传输
 
-#### TCP 客户端
+#### 4. TCP 客户端
 
 ```python
 from socket import *
@@ -76,7 +76,7 @@ print(recv_msg)
 tcp_client_socket.close()
 ```
 
-#### TCP 服务端
+#### 5. TCP 服务端
 
 ```python
 from socket import *
@@ -109,5 +109,5 @@ client_socket.close()
 tcp_server_socket.close()
 ```
 
-#### TCP 通信过程
+#### 6. TCP 通信过程
 ![TCP 三次握手和四次挥手](http://p4emt3ysm.bkt.clouddn.com/tcp.png)

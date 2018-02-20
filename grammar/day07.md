@@ -1,7 +1,7 @@
 # day07 面向对象基础
 
 ---
-#### 定义一个 `Person` 类，提供 `eat` 方法
+#### 1. 定义一个 `Person` 类，提供 `eat` 方法
 
 ```python
 class Person(object):
@@ -9,7 +9,7 @@ class Person(object):
         print("I'm eating.")
 ```
 
-#### 使用上面的 `Person` 类创建一个 `zhangsan` 对象，并调用 `eat` 方法
+#### 2. 使用上面的 `Person` 类创建一个 `zhangsan` 对象，并调用 `eat` 方法
 
 ```python
 class Person(object):
@@ -21,7 +21,7 @@ zhangsan = Person()
 zhangsan.eat()
 ```
 
-#### 为 `zhangsan` 对象添加 `age` 属性，值为 `18`。
+#### 3. 为 `zhangsan` 对象添加 `age` 属性，值为 `18`。
 
 ```python
 class Person(object):
@@ -33,7 +33,7 @@ zhangsan = Person()
 zhangsan.age = 18
 ```
 
-#### 使用上面的 `zhangsan` 对象打印 `age` 的值
+#### 4. 使用上面的 `zhangsan` 对象打印 `age` 的值
 
 ```python
 class Person(object):
@@ -46,7 +46,7 @@ zhangsan.age = 18
 print(zhangsan.age)
 ```
 
-#### 在 `Person` 类提供给 `talk` 方法，在方法里使用 `self` 获取 `age` 并打印： `我今年 %d 岁`
+#### 5. 在 `Person` 类提供给 `talk` 方法，在方法里使用 `self` 获取 `age` 并打印： `我今年 %d 岁`
 
 ```python
 class Person(object):
@@ -57,7 +57,7 @@ class Person(object):
         print("我今年{}岁".format(self.age))
 ```
 
-#### 使用 `zhangsan` 对象调用 `talk` 方法
+#### 6. 使用 `zhangsan` 对象调用 `talk` 方法
 
 ```python
 class Person(object):
