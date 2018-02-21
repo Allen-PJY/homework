@@ -64,7 +64,7 @@ sum = 3
 ##### 定义匿名函数的语法格式是什么？
 
 ```python
-lambda args: code block
+lambda args: code_block
 ```
 
 ##### 简单说明一下，匿名函数没有名字，要怎么调用？

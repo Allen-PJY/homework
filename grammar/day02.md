@@ -41,15 +41,15 @@ print("年龄是{}".format(age))
 ##### for 语句的完整语法是？
 
 ```python
-for i in iterable_obj:
-	code block
+for item in iterable:
+	loop_body
 ```
 
 ##### 简述 for 语句的执行过程是怎样的？
 
-- 判断`iterable_obj`是否可迭代
-- 从`iterable_obj`取出一个元素，执行`code block`
-- 重复第二步，直到无法取出元素
+- 通过`iter()`函数获取可迭代对象`iterable`的迭代器
+- 对该迭代器不断调用`next()`方法，取出下一个值并赋值给`item`，然后执行`loop_body`
+- 遇到`StopIteration`异常后退出
 
 ### 4. 函数
 

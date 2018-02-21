@@ -36,13 +36,13 @@
 
 ```python
 while condition:
-code block
+    loop_body
 ```
 
 ##### while 语句的执行过程是怎样的
 
-* `condition`成立时执行`code block`
-* 执行完成再次判断`condition`, 如果成立仍然执行`code block`
+* `condition`成立时执行`loop_body`
+* 执行完成再次判断`condition`, 如果成立仍然执行`loop_body`
 * 重复第二步，直到`condition`不再成立
 
 ### 4. 函数
@@ -51,8 +51,8 @@ code block
 
 ```python
 def func():
-code block
-return result
+    code_block
+    return result
 ```
 
 ##### 调用函数的基本格式是什么

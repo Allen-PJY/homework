@@ -41,30 +41,49 @@ else:
 
 ```python
 import random
-def mora():
+
+
+def mora(user_option):
     option = {
         'a': '剪刀',
         'b': '石头',
         'c': '布',
     }
+
+    result_msg = {
+        'win': '你赢了',
+        'draw': '平局',
+        'lose': '你输了',
+    }
+
     computer_option = random.choice(list(option.keys()))
-    print("电脑已经准备好了！")
-    user_option = input("请出拳：【a】剪刀，【b】石头，【c】布：")
+
     if user_option not in option:
-        print("不按套路出牌")
         return
 
-    result = ''
-    if (computer_option == 'a' and user_option == 'b') or (computer_option == 'b' and user_option == 'c') or (computer_option == 'c' and user_option == 'a'):
-        result = '你赢了'
+    if (computer_option == 'a' and user_option == 'b') or \
+            (computer_option == 'b' and user_option == 'c') or \
+            (computer_option == 'c' and user_option == 'a'):
+        ret_option = 'win'
     elif (computer_option == user_option):
-        result = '平局'
+        ret_option = 'draw'
     else:
-        result = '你输了'
+        ret_option = 'lose'
 
-    print(result)
+    return {
+        'computer_option': option.get(computer_option),
+        'user_option': option.get(user_option),
+        'result': result_msg.get(ret_option),
+    }
 
-mora()
+
+if __name__ == '__main__':
+    user_option = input("请出拳：【a】剪刀，【b】石头，【c】布：")
+    ret = mora(user_option)
+    if not ret:
+        print("不按套路出牌")
+    else:
+        print("电脑:{computer_option}\t玩家:{user_option}\n{result}".format(**ret))
 ```
 
 ### 3. while 语句
