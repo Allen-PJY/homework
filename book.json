@@ -1,0 +1,26 @@
+{
+	"plugins": [
+		"-lunr",
+		"-search", 
+		"-sharing",
+		"anchors",
+		"splitter",
+		"toggle-chapters",
+		"search-pro",
+		"github-buttons",
+		"copy-code-button"
+	],
+
+	"pluginsConfig": {
+		"github-buttons": {
+			"buttons": [
+			{
+				"user": "Allen-PJY",
+				"repo": "homework",
+				"type": "star",
+				"size": "small",
+				"count": true
+			}]
+		}
+	}
+}
