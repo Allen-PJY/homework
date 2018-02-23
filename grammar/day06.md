@@ -42,20 +42,20 @@ else:
 ```python
 import random
 
+option = {
+    'a': '剪刀',
+    'b': '石头',
+    'c': '布',
+}
+
+result_msg = {
+    'win': '你赢了',
+    'draw': '平局',
+    'lose': '你输了',
+}
+
 
 def mora(user_option):
-    option = {
-        'a': '剪刀',
-        'b': '石头',
-        'c': '布',
-    }
-
-    result_msg = {
-        'win': '你赢了',
-        'draw': '平局',
-        'lose': '你输了',
-    }
-
     computer_option = random.choice(list(option.keys()))
 
     if user_option not in option:
@@ -65,7 +65,7 @@ def mora(user_option):
             (computer_option == 'b' and user_option == 'c') or \
             (computer_option == 'c' and user_option == 'a'):
         ret_option = 'win'
-    elif (computer_option == user_option):
+    elif computer_option == user_option:
         ret_option = 'draw'
     else:
         ret_option = 'lose'
@@ -78,8 +78,8 @@ def mora(user_option):
 
 
 if __name__ == '__main__':
-    user_option = input("请出拳：【a】剪刀，【b】石头，【c】布：")
-    ret = mora(user_option)
+    user = input("请出拳：【a】{a}，【b】{b}，【c】{c}：".format(**option))
+    ret = mora(user)
     if not ret:
         print("不按套路出牌")
     else:
